@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link href="https://fonts.cdnfonts.com/css/adumu-inline" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <div class="header-title">
+        <h1>Easy Peasy English</h1>
+      </div>
+      <div><p class="subtitle">〜自分のリズムで、英語を味方に〜</p></div>
+    </div>
+  
+    <nav class="navbar">
+      <ul>
+        <li><a href="#about">Mind</a></li>
+        <li><a href="#grammar">Grammar Guide</a></li>
+        <li><a href="#contents">Contents</a></li>
+        <li><a href="#question-box">Question Box</a></li>
+      </ul>
+    </nav>
+  </header>
+      <!-- About Section -->
+      <section id="about">
+        <h2>My mind;)</h2>
+        <p>教員として1年間勤務する中で、中学生の英語力の差を強く実感。英語学習の理解度やモチベーションは、出会う先生や学習環境に大きく左右されることを痛感した。「英語をできるようにする」ことだけではなく、“誰でも平等に学べる場”を届けたいという思いから本企画を立ち上げた。まずは文法の基礎解説からスタートし、今後は実践的な英語表現や、英語を使って世界を広げられるような学びも展開していく。最終的には、「英語が好き！」と思える人を育てることを目指す。</p>
+      </section>
+
+    <!-- Grammar Guide Link -->
+    <section id="grammar">
+      <h2>Grammar Guide</h2>
+      <div class="grammar-grid">
+    
+        <!-- 1. Tenses -->
+        <div class="grammar-box" onclick="openModal('modal-tenses')">
+          <div class="grammar-summary">
+            <h3>時制</h3>
+            <p>現在・過去・未来の基本的な使い分け！</p>
+          </div>
+        </div>
+    
+        <!-- 2. Modal Verbs -->
+        <div class="grammar-box" onclick="openModal('modal-modals')">
+          <div class="grammar-summary">
+            <h3>助動詞</h3>
+            <p>can, must, should の使い方！</p>
+          </div>
+        </div>
+    
+        <!-- 3. Passive Voice -->
+        <div class="grammar-box" onclick="openModal('modal-passive')">
+          <div class="grammar-summary">
+            <h3>受動態</h3>
+            <p>「〜される」表現をマスターしよう！</p>
+          </div>
+        </div>
+    
+        <!-- 4. Conditionals -->
+        <div class="grammar-box" onclick="openModal('modal-conditionals')">
+          <div class="grammar-summary">
+            <h3>仮定法</h3>
+            <p>If を使った「もし〜なら」の文！</p>
+          </div>
+        </div>
+    
+        <!-- 5. Relative Clauses -->
+        <div class="grammar-box" onclick="openModal('modal-relative')">
+          <div class="grammar-summary">
+            <h3>関係代名詞</h3>
+            <p>who, which, that の使い分け！</p>
+          </div>
+        </div>
+    
+        <!-- 6. Comparatives & Superlatives -->
+        <div class="grammar-box" onclick="openModal('modal-comparatives')">
+          <div class="grammar-summary">
+            <h3>比較級・最上級</h3>
+            <p>形容詞の変化で比較しよう！</p>
+          </div>
+        </div>
+    
+      </div>
+    </section>
+    
+    <!-- モーダル一覧 -->
+    
+    <div id="modal-tenses" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal-tenses')">&times;</span>
+        <h2>時制</h2>
+        <p>現在形：I eat / 過去形：I ate / 未来形：I will eat</p>
+      </div>
+    </div>
+    
+    <div id="modal-modals" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal-modals')">&times;</span>
+        <h2>助動詞</h2>
+        <p>can（〜できる）、must（〜しなければならない）、should（〜すべき）などの使い方。</p>
+      </div>
+    </div>
+    
+    <div id="modal-passive" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal-passive')">&times;</span>
+        <h2>受動態</h2>
+        <p>能動態：He writes a letter. → 受動態：A letter is written by him.</p>
+      </div>
+    </div>
+    
+    <div id="modal-conditionals" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal-conditionals')">&times;</span>
+        <h2>仮定法</h2>
+        <p>例：If I were you, I would study more.（もし私があなたなら、もっと勉強するのに）</p>
+      </div>
+    </div>
+    
+    <div id="modal-relative" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal-relative')">&times;</span>
+        <h2>関係代名詞</h2>
+        <p>This is the book **that** I read. / She is the girl **who** sings well.</p>
+      </div>
+    </div>
+    
+    <div id="modal-comparatives" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeModal('modal-comparatives')">&times;</span>
+        <h2>比較級・最上級</h2>
+        <p>例：tall → taller（比較級）→ the tallest（最上級）</p>
+      </div>
+    </div>
+    <!-- 「もっと見る」ボタン -->
+<button id="show-more-btn">もっと見る</button>
+
+<!-- 追加の文法ボックス（最初は非表示にしておく） -->
+<div class="grammar-grid extra-grammar" style="display: none;">
+  <div class="grammar-box" onclick="openModal('modal-example')">
+    <div class="grammar-summary">
+      <h3>例文で学ぼう</h3>
+      <p>文法を実際の文でチェック！</p>
+    </div>
+  </div>
+  <!-- 必要ならもっと追加 -->
+</div>
+
+
+    <section id="ccontents">
+      <h2>Contents</h2>
+      <p>参考サイトや海外に関する情報を更新していきます！</p>
+    </section>
+      <!-- Question Box Section -->
+      <section id="question-box">
+        <h2>Question Box</h2>
+        <button id="openModal">Question Here!</button>
+      </section>
+    
+      
+    
+      <!-- Footer -->
+      <footer>
+        <p>&copy; 2025 Easy Peasy English. All rights reserved.</p>
+      </footer>
+      <script>
+        function openModal(id) {
+    const modal = document.getElementById(id);
+    modal.style.display = "block";
+
+    // モーダルを開くときにアニメーション用クラスを追加（再生されるように）
+    const content = modal.querySelector(".modal-content");
+    content.style.animation = "fadeInModal 0.4s ease";
+  }
+
+  function closeModal(id) {
+    const modal = document.getElementById(id);
+    modal.style.display = "none";
+  }
+
+  // モーダル外をクリックして閉じる処理
+  window.onclick = function(event) {
+    const modals = document.querySelectorAll(".modal");
+    modals.forEach(modal => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  };
+
+  // 「もっと見る」ボタンの表示切り替え
+document.getElementById("show-more-btn").addEventListener("click", function () {
+  const extraGrammar = document.querySelector(".extra-grammar");
+  if (extraGrammar.style.display === "none") {
+    extraGrammar.style.display = "grid"; // もとのgrammar-gridと揃える
+    this.textContent = "閉じる";
+  } else {
+    extraGrammar.style.display = "none";
+    this.textContent = "もっと見る";
+  }
+});
+
+      </script>
+
+</body>
+</html>
