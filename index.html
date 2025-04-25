@@ -163,7 +163,8 @@
       </section>
     
       
-    
+      <button id="backToTop" class="back-to-top">TOP</button>
+
       <!-- Footer -->
       <footer>
         <p>&copy; 2025 Easy Peasy English. All rights reserved.</p>
@@ -204,6 +205,25 @@ document.getElementById("show-more-btn").addEventListener("click", function () {
     this.textContent = "もっと見る";
   }
 });
+// 「Webtopに戻る」ボタンの表示・非表示を管理
+const backToTopButton = document.getElementById("backToTop");
+
+// スクロール位置が一定以上になったらボタンを表示
+window.onscroll = function () {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    backToTopButton.style.display = "block";
+  } else {
+    backToTopButton.style.display = "none";
+  }
+};
+
+// ボタンがクリックされたらページトップに戻る
+backToTopButton.onclick = function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
 
       </script>
 

@@ -48,6 +48,23 @@ header h1 {
   margin-right: 150px;
 }
 
+.navbar ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.navbar li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.navbar li a:hover {
+  transform: translateY(-5px);
+  color: #48aa74; /* optional: hover時の背景色 */
+}
+
 
 nav ul {
   display: flex;
@@ -244,7 +261,7 @@ footer {
   margin-top: 20px;
   padding: 10px 20px;
   font-size: 1rem;
-  background-color: #ffd966;
+  background-color: #f3722c;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -252,5 +269,25 @@ footer {
 }
 
 #show-more-btn:hover {
-  background-color: #ffcc33;
+  background-color: #f3722c;
+}
+
+/* 右下に固定されるWebtopに戻るボタンのスタイル */
+.back-to-top {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #f3722c;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.back-to-top:hover {
+  background-color: #ff1493; /* ホバー時の色 */
 }
