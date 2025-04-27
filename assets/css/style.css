@@ -103,7 +103,7 @@ section p {
 
 /* ボタン */
 button {
-  background-color: #f9844a;
+  background-color: #f3722c;
   color: #fff;
   padding: 12px 24px;
   font-size: 18px;
@@ -115,7 +115,7 @@ button {
 }
 
 button:hover {
-  background-color: #f3722c;
+  background-color: #f9844a;
 }
 
 /* モーダル */
@@ -184,6 +184,7 @@ footer {
   font-family: 'Adumu Inline', cursive;
   font-size: 20px;
   margin-bottom: 5px;
+
 }
 
 .grammar-summary p {
@@ -203,8 +204,17 @@ footer {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(4px);
-  animation: fadeInBg 0.3s ease;
+  animation: fadeInBg 0.3s ease; /* アニメーションを追加 */
 }
+@keyframes fadeInBg {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 
 /* モーダルの内容 */
 .modal-content {
@@ -221,6 +231,17 @@ footer {
   position: relative;
 }
 
+.grammar-grid.extra-grammar {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2列に設定 */
+  gap: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  max-width: 800px; /* 上と同じ幅にするため最大幅を設定 */
+  margin: 0 auto;
+}
+
 /* 閉じるボタン */
 .close-btn {
   position: absolute;
@@ -232,6 +253,18 @@ footer {
 }
 .close-btn:hover {
   color: #fff;  /* ホバー時に色を変更 */
+}
+
+.grammar-grid extra-grammar {
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.grammar-box:hover {
+    transform: scale(1.05); /* ホバー時に少し拡大する効果 */
 }
 
 
@@ -263,7 +296,7 @@ footer {
   font-size: 1rem;
   background-color: #f3722c;
   border: none;
-  border-radius: 8px;
+  border-radius: 50px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -289,5 +322,5 @@ footer {
 }
 
 .back-to-top:hover {
-  background-color: #ff1493; /* ホバー時の色 */
+  background-color: #f9844a; /* ホバー時の色 */
 }
