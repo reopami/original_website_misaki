@@ -305,6 +305,80 @@ footer {
   background-color: #f3722c;
 }
 
+#youtube-slider {
+  padding: 2rem;
+  text-align: center;
+}
+
+.slider-container {
+  position: relative;
+  width: 130%;
+  margin: auto;
+  overflow: hidden;
+  justify-content: center; /* 中央揃え */
+  gap: 35px; /* 画像同士の間隔を広げる */
+  padding: 20px 0;
+  flex-wrap: wrap; /* 画面が狭い時に折り返す */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-track {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  transition: transform 0.5s ease;
+}
+
+.slider-track a {
+  flex: auto;
+  margin: 0 10px;
+}
+
+.slider-track img {
+  width: 200px;
+  height: 120px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background-color: #ffffffaa;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 2;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+}
+
+.slider-btn.left {
+  left: 0;
+}
+
+.slider-btn.right {
+  right: 0;
+}
+
+
+.slider-container img {
+  width: 400px; /* 画像を大きめにする */
+  height: auto;
+  border-radius: 16px;
+  transition: transform 0.3s;
+  justify-content: center;
+  align-items: center;
+}
+
+.youtube-thumbnails img:hover {
+  transform: scale(1.05);
+}
+
+
 /* 右下に固定されるWebtopに戻るボタンのスタイル */
 .back-to-top {
   position: fixed;

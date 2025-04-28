@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Easy Peasy EnglishEasy Peasy English</title>
         <link rel="stylesheet" href="./assets/css/style.css" />
         <link rel="stylesheet" href="./assets/css/reset.css" />
         <link
@@ -106,8 +106,8 @@
                 <span class="close-btn" onclick="closeModal('modal-tenses')"
                     >&times;</span
                 >
-                <h2>時制</h2>
-                <p>現在形：I eat / 過去形：I ate / 未来形：I will eat</p>
+                <h2>３人称単数</h2>
+                <p>３人称単数とは、<br>「私とあなた以外の全ての単数」と覚えたら終了！<br>ここで覚えて欲しいのは、基準を自分（I）にして、目の前にいる相手（YOU）と置いて考えるのが大切。<br>３人称単数と言っているので、複数の時点で論外。</p>
             </div>
         </div>
 
@@ -117,9 +117,7 @@
                     >&times;</span
                 >
                 <h2>助動詞</h2>
-                <p>
-                    can（〜できる）、must（〜しなければならない）、should（〜すべき）などの使い方。
-                </p>
+                <p>助動詞とは、「動詞を助ける」役割を持っている！<br>ここで問題<br>動詞が拳銃を向けられています。助動詞はどうしますか？<br>Yes!助動詞は動詞を助けます。<br>どのように？動詞の前に立って守るはず！<br>ということで、助動詞は動詞の直前に置かれます（例外あり）</p>
             </div>
         </div>
 
@@ -213,9 +211,32 @@
             <!-- 必要ならもっと追加 -->
         </div>
 
-        <section id="ccontents">
+        <section id="contents">
             <h2>Contents</h2>
-            <p>参考サイトや海外に関する情報を更新していきます！</p>
+            <p>おすすめのYouTubeなどを上げていくのでお楽しみに！</p>
+            <div class="slider-container">
+                <button class="slider-btn left" onclick="slideLeft()">&#8592;</button>
+                <div class="slider-track">
+                    <a href="https://youtu.be/hcXIuYgIW5U?si=x-TUtrbAgvQeCYg9" target="_blank">
+                        <img src="https://img.youtube.com/vi/hcXIuYgIW5U/mqdefault.jpg" alt="YouTube 動画1">
+
+                    </a>
+                    <a href="https://youtu.be/gyxpTiekrjQ?si=wLOESIBw_vBpiLzt" target="_blank">
+                        <img src="https://img.youtube.com/vi/gyxpTiekrjQ/mqdefault.jpg" alt="動画2">
+                    </a>
+                    <a href="https://youtu.be/1zJ1AlSdy7k?si=IdEhSsPvFVBBVYav" target="_blank">
+                        <img src="https://img.youtube.com/vi/1zJ1AlSdy7k/mqdefault.jpg" alt="動画3">
+                    </a>
+                    <a href="https://youtu.be/htF_g1MWV9M?si=UtYE5X2e7-kPrLW4" target="_blank">
+                        <img src="https://img.youtube.com/vi/htF_g1MWV9M/mqdefault.jpg" alt="動画4">
+                    </a>
+                    <a href="https://youtu.be/MkElfR_NPBI?si=OQhpcHo8qZ1xH-eV" target="_blank">
+                        <img src="https://img.youtube.com/vi/MkElfR_NPBI/mqdefault.jpg" alt="動画5">
+                    </a>
+                    <!-- もっと追加できるよ！ -->
+                </div>
+                <button class="slider-btn right" onclick="slideRight()">&#8594;</button>
+            </div>
         </section>
         <!-- Question Box Section -->
         <section id="question-box">
@@ -292,6 +313,45 @@
                     behavior: "smooth",
                 });
             };
+            let currentTranslate = 0;
+
+function slideLeft() {
+    const track = document.querySelector('.slider-track');
+    currentTranslate += 220; // サムネ1個分＋余白
+    if (currentTranslate > 0) {
+        currentTranslate = 0;
+    }
+    track.style.transform = `translateX(${currentTranslate}px)`;
+}
+
+function slideRight() {
+    const track = document.querySelector('.slider-track');
+    const trackWidth = track.scrollWidth;
+    const containerWidth = document.querySelector('.slider-container').offsetWidth;
+    
+    currentTranslate -= 420;
+    if (Math.abs(currentTranslate) + containerWidth > trackWidth) {
+        currentTranslate = -(trackWidth - containerWidth);
+    }
+    track.style.transform = `translateX(${currentTranslate}px)`;
+}
+const track = document.querySelector('.slider-track');
+let currentIndex = 0;
+const totalSlides = document.querySelectorAll('.slider-track a').length;
+
+function moveSlide(index) {
+  track.style.transform = `translateX(-${index * 220}px)`; // 画像幅＋余白分
+}
+
+// 自動スライドする
+setInterval(() => {
+  currentIndex++;
+  if (currentIndex >= totalSlides) {
+    currentIndex = 0;
+  }
+  moveSlide(currentIndex);
+}, 3000); // 3000ミリ秒＝3秒ごとに切り替え
+
         </script>
     </body>
 </html>
