@@ -305,7 +305,6 @@
                     backToTopButton.style.display = "none";
                 }
             };
-
             // ボタンがクリックされたらページトップに戻る
             backToTopButton.onclick = function () {
                 window.scrollTo({
@@ -340,7 +339,7 @@ let currentIndex = 0;
 const totalSlides = document.querySelectorAll('.slider-track a').length;
 
 function moveSlide(index) {
-  track.style.transform = `translateX(-${index * 220}px)`; // 画像幅＋余白分
+  track.style.transform = `translateX(-${index * 440}px)`; // 画像幅＋余白分
 }
 
 // 自動スライドする

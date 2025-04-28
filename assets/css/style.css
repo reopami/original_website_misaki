@@ -312,13 +312,12 @@ footer {
 
 .slider-container {
   position: relative;
-  width: 130%;
+  /* width: 130%; */
   margin: auto;
-  overflow: hidden;
-  justify-content: center; /* 中央揃え */
+  /* overflow: hidden; */
   gap: 35px; /* 画像同士の間隔を広げる */
   padding: 20px 0;
-  flex-wrap: wrap; /* 画面が狭い時に折り返す */
+  /* flex-wrap: wrap; 画面が狭い時に折り返す */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -327,7 +326,7 @@ footer {
 .slider-track {
   display: flex;
   width: 100%;
-  justify-content: center;
+  justify-content: flex-start;
   transition: transform 0.5s ease;
 }
 
