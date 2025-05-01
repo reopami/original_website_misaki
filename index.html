@@ -3,13 +3,12 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Easy Peasy EnglishEasy Peasy English</title>
+        <title>Easy Peasy English</title>
         <link rel="stylesheet" href="./assets/css/style.css" />
         <link rel="stylesheet" href="./assets/css/reset.css" />
         <link
             href="https://fonts.cdnfonts.com/css/adumu-inline"
-            rel="stylesheet"
-        />
+            rel="stylesheet"/>
     </head>
     <body>
         <header>
@@ -82,7 +81,7 @@
                 <div class="grammar-box" onclick="openModal('modal-relative')">
                     <div class="grammar-summary">
                         <h3>関係代名詞</h3>
-                        <p>who, which, that の使い分け！</p>
+                        <p>who, which, that ってどうやって使い分けるの？</p>
                     </div>
                 </div>
 
@@ -93,7 +92,7 @@
                 >
                     <div class="grammar-summary">
                         <h3>比較級・最上級</h3>
-                        <p>形容詞の変化で比較しよう！</p>
+                        <p>意味と形容詞の変化の仕組みを理解しよう！</p>
                     </div>
                 </div>
             </div>
@@ -108,6 +107,7 @@
                 >
                 <h2>３人称単数</h2>
                 <p>３人称単数とは、<br>「私とあなた以外の全ての単数」と覚えたら終了！<br>ここで覚えて欲しいのは、基準を自分（I）にして、目の前にいる相手（YOU）と置いて考えるのが大切。<br>３人称単数と言っているので、複数の時点で論外。</p>
+                <img src="./assets/img/Which is “三人称単数”.jpg" alt="">
             </div>
         </div>
 
@@ -213,7 +213,7 @@
 
         <section id="contents">
             <h2>Contents</h2>
-            <p>おすすめのYouTubeなどを上げていくのでお楽しみに！</p>
+            <p></p>
             <div class="slider-container">
                 <button class="slider-btn left" onclick="slideLeft()">&#8592;</button>
                 <div class="slider-track">
@@ -233,7 +233,7 @@
                     <a href="https://youtu.be/MkElfR_NPBI?si=OQhpcHo8qZ1xH-eV" target="_blank">
                         <img src="https://img.youtube.com/vi/MkElfR_NPBI/mqdefault.jpg" alt="動画5">
                     </a>
-                    <!-- もっと追加できるよ！ -->
+                    <!-- もっと追加 -->
                 </div>
                 <button class="slider-btn right" onclick="slideRight()">&#8594;</button>
             </div>
@@ -342,15 +342,16 @@ function moveSlide(index) {
   track.style.transform = `translateX(-${index * 440}px)`; // 画像幅＋余白分
 }
 
-// 自動スライドする
-setInterval(() => {
-  currentIndex++;
-  if (currentIndex >= totalSlides) {
-    currentIndex = 0;
-  }
-  moveSlide(currentIndex);
-}, 3000); // 3000ミリ秒＝3秒ごとに切り替え
+// // 自動スライドする
+// setInterval(() => {
+//   currentIndex++;
+//   if (currentIndex >= totalSlides) {
+//     currentIndex = 0;
+//   }
+//   moveSlide(currentIndex);
+// }, 3000); // 3000ミリ秒＝3秒ごとに切り替え
 
         </script>
+        <script src="./assets/JS/slider.js"></script>
     </body>
 </html>
